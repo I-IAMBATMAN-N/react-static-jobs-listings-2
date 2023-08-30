@@ -1,0 +1,5 @@
+/public/index.html
+X-Content-Type-Options: nosniff
+
+/src/main.jsx
+X-Content-Type-Options: nosniff
