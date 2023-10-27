@@ -13,6 +13,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+
+  position: relative;
 }
 .main-header {
   height: 200px;
