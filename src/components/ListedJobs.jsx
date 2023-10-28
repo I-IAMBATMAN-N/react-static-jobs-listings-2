@@ -39,7 +39,7 @@ export default function ListedJobs({
             : { ...job }
         )
       );
-      console.log("listed jobs", jobs);
+      // console.log("listed jobs", jobs);
     }
     return (
       <>
