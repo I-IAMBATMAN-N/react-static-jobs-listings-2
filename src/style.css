@@ -1,6 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 html {
@@ -10,7 +18,12 @@ body {
   background-color: hsl(180, 52%, 96%);
   font-family: "League Spartan";
   color: hsl(180, 29%, 50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 3.2rem;
 
@@ -20,6 +33,10 @@ body {
   height: 200px;
   width: 100%;
   background-image: url(images/bg-header-mobile.svg),
+    -webkit-gradient(linear, left top, left bottom, from(hsl(180, 29%, 50%)), to(hsl(180, 29%, 50%)));
+  background-image: url(images/bg-header-mobile.svg),
+    -o-linear-gradient(hsl(180, 29%, 50%), hsl(180, 29%, 50%));
+  background-image: url(images/bg-header-mobile.svg),
     linear-gradient(hsl(180, 29%, 50%), hsl(180, 29%, 50%));
   position: relative;
 }
@@ -28,10 +45,19 @@ body {
   position: absolute;
   bottom: 0;
   left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
   transform: translate(-50%, 50%);
   max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background-color: #ffff;
   border-radius: 5px;
@@ -39,8 +65,14 @@ body {
   gap: 1.2rem;
 }
 .keyword-container {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0;
   flex: 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 1.2rem;
   overflow-x: scroll;
@@ -49,16 +81,26 @@ body {
   margin: 0;
   padding: 0;
   padding-left: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .keyword-span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 0.8rem;
   background-color: hsl(180, 52%, 96%);
 }
 .clear-cross {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   height: 100%;
   color: hsl(180, 52%, 96%);
@@ -73,6 +115,8 @@ body {
 }
 .header-input {
   display: block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   border: none;
   font-size: 2.4rem;
@@ -82,6 +126,14 @@ body {
 .header-input:focus,
 .header-input:active {
   outline: none;
+}
+.header-input::-webkit-input-placeholder {
+}
+.header-input::-moz-placeholder {
+}
+.header-input:-ms-input-placeholder {
+}
+.header-input::-ms-input-placeholder {
 }
 .header-input::placeholder {
 }
@@ -105,7 +157,11 @@ body {
   padding-top: 8rem;
 }
 .header--subheadings {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .heading-1 {
@@ -131,7 +187,12 @@ body {
 .listed-jobs {
   padding: 3.2rem 0rem;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 5.4rem;
 }
@@ -143,6 +204,7 @@ body {
   padding-bottom: 0.4rem;
   padding-left: 2rem;
   border-radius: 7px;
+  -webkit-box-shadow: 0px 33px 32px -37px hsl(180, 29%, 50%);
   box-shadow: 0px 33px 32px -37px hsl(180, 29%, 50%);
 }
 .listed-job:hover,
@@ -159,9 +221,17 @@ body {
   width: 6.4rem;
   height: 6.4rem;
   border-radius: 50%;
+  -webkit-transform: translate(37%, -50%);
+  -ms-transform: translate(37%, -50%);
   transform: translate(37%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
   color: rgba(0, 0, 0, 0);
@@ -171,16 +241,25 @@ body {
 }
 .listed-job--header {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 1.6rem;
   padding: 1.6rem 0;
 }
 .header--subheadings,
 .job-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .job-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .job-info--text {
@@ -202,6 +281,8 @@ body {
   position: absolute;
   left: 0;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 .featured-techs {
@@ -225,7 +306,11 @@ body {
     font-size: 57.25%;
   }
   .listed-job {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .featured-techs {
@@ -245,10 +330,17 @@ body {
     height: 120px;
   }
   .input-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   .keyword-container {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 fit-content;
     flex: 0 0 fit-content;
     overflow-x: auto;
   }
@@ -264,20 +356,30 @@ body {
   }
   .listed-job--img-container {
     position: static;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 15%;
     flex: 0 0 15%;
     height: 100%;
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .listed-job--img {
     width: 60%;
   }
   .listed-job--header {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 30%;
     flex: 0 0 30%;
   }
   .featured-techs {
     border-top: none;
     display: inline-block;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     margin-left: auto;
   }
